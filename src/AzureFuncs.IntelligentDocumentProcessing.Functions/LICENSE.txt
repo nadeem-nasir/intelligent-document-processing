@@ -1,0 +1,15 @@
+﻿All rights reserved. No part of this source code may be reproduced, distributed, or transmitted in any form or by any means, without the prior written permission of the owner.
+
+The Licensor grants the Licensee a non-exclusive, non-transferable, revocable, and limited license to access and use the source code for the Course, hereafter known as the "Source Code". The Source Code includes all files, documents, scripts, libraries, and other materials that are part of the Course.
+
+The Licensee may use the Source Code for personal, educational, and non-commercial purposes only. The Licensee may not use the Source Code for any commercial or revenue-generating activities, such as selling, renting, leasing, sublicensing, distributing, or offering the Source Code or any derivative works to any third parties.
+
+The Licensee may modify the Source Code for their own learning and improvement, but they may not claim ownership or authorship of the Source Code or any derivative works. The Licensee must retain all original notices, credits, and acknowledgments in the Source Code and any derivative works.
+
+The Licensee may not reverse engineer, decompile, disassemble, or otherwise attempt to derive the Source Code from any executable or binary files that are part of the Course.
+
+The Licensee may not remove, alter, or obscure any trademarks, logos, or other identifiers of the Licensor or the Course from the Source Code or any derivative works.
+
+The Licensee acknowledges and agrees that the Source Code is the intellectual property and proprietary information of the Licensor and that the Licensor retains all rights, title, and interest in and to the Source Code and any derivative works.
+
+The Source Code is provided "as is" and without any warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and non-infringement. The Licensor does not warrant that the Source Code will meet the Licensee's requirements, expectations, or needs, or that the Source Code will be error-free, secure, or compatible with any devices, systems, or software. The Licensee assumes all risk and responsibility for the use of the Source Code and any derivative works.

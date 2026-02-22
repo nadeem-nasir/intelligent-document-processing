@@ -1,0 +1,15 @@
+﻿parameters:
+  azureSubscriptionServiceConnectionName: '' # Azure service connection name in azure devops
+  appName: ''
+  appType: 'functionAppLinux' # default is functionApp
+  artifactPackage: ''
+  resourceGroupName: '' # Resource group name in azure
+
+steps:
+- task: AzureFunctionApp@1 
+  inputs:
+    azureSubscription: ${{parameters.azureSubscriptionServiceConnectionName}}
+    appType: ${{parameters.appType}}
+    appName: ${{parameters.appName}}
+    package: ${{parameters.artifactPackage}}
+    resourceGroupName: ${{parameters.resourceGroupName}}

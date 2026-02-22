@@ -1,0 +1,59 @@
+﻿name: $(Date:yyyyMMdd).$(Rev:r)
+
+trigger:
+  batch: true
+  branches:
+    include:
+    - master
+    - feature/*
+
+  paths:
+    exclude:
+     - doc
+     - README.md
+
+pr:
+  branches:
+    include:
+    - master
+
+variables:
+- group: AzureFuncs   # Variable groups defined in azure devops
+- name: vmImage
+  value: 'ubuntu-20.04'
+- name: appType
+  value: 'functionAppLinux'
+- name: artifactName
+  value: 'AzureOpenAIFunctions'
+
+stages:
+- stage: Build
+  jobs:
+  - job: 'Build'
+    pool:
+      vmImage: $(vmImage)
+    steps:
+    - template: 'build.yaml'
+      parameters:        
+        projectFiles: '$(System.DefaultWorkingDirectory)/src/*/*.csproj'
+        artifactName: $(artifactName)
+
+- stage: DEV
+  dependsOn: ['Build']
+  jobs:
+  - deployment: DEV
+    
+    pool:
+        vmImage: $(vmImage)
+    environment: DEV
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - template: 'release.yaml'  
+            parameters:
+              azureSubscriptionServiceConnectionName: $(azureSubscriptionServiceConnectionName) # define in azure devops variable group
+              appName: $(IntelligentDocumentFunctionsAppName) # define in azure devops variable group
+              appType: $(appType)
+              artifactPackage: '$(Pipeline.Workspace)/$(artifactName)/$(Build.BuildId).zip'
+              resourceGroupName: $(resourceGroupName) # define in azure devops variable group

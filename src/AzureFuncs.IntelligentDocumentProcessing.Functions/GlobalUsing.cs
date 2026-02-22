@@ -1,0 +1,15 @@
+﻿global using Azure;
+global using Azure.AI.FormRecognizer.DocumentAnalysis;
+global using AzureFuncs.IntelligentDocumentProcessing.Functions.Configuration;
+global using AzureFuncs.IntelligentDocumentProcessing.Functions.Extensions;
+global using AzureFuncs.IntelligentDocumentProcessing.Functions.Mapper;
+global using AzureFuncs.IntelligentDocumentProcessing.Functions.Models;
+global using AzureFuncs.IntelligentDocumentProcessing.Functions.Providers;
+global using AzureFuncs.IntelligentDocumentProcessing.Functions.Services;
+global using Microsoft.Azure.Functions.Worker;
+global using Microsoft.Azure.Functions.Worker.Http;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.Extensions.Hosting;
+global using Microsoft.Extensions.Logging;
+global using System.Net;
+global using System.Text.Json;
